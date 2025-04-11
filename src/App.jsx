@@ -32,9 +32,9 @@ function App() {
       <Header theme={currentTheme} changeTheme={changeTheme} />
       <Hero theme={currentTheme} />
       <Projects theme={currentTheme} />
-      <Skills theme={currentTheme} />
-      <Certificates theme={currentTheme} />
       <Experience theme={currentTheme} />
+      <Certificates theme={currentTheme} />
+      <Skills theme={currentTheme} />
     </div>
   );
 }
