@@ -8,11 +8,17 @@ export default function Header({ theme, changeTheme }) {
 
   return (
     <header className={`sticky top-0 z-50 ${theme.bg} transition-colors duration-300`}>
-      <div className='container mx-auto px-16 md:px-28 py-4 flex justify-between items-center'>
+      <div className='container mx-auto px-8 md:px-28 py-4 flex justify-between items-center'>
         <div className='text-2xl font-bold'>
           <span className={`flex items-center gap-2 ${theme.text}`}>
             {/* Change Logo */}
-            <img src='/assets/logo.png' alt='logo' width={35} height={35} />
+            <img
+              src='https://res.cloudinary.com/diolcqc1f/image/upload/v1744387272/logo_qjfhso.png'
+              alt='logo'
+              width={40}
+              height={40}
+              className={`bg-current rounded-xl p-1.5`}
+            />
             {/* Change Text */}
             <span className={theme.text}>| portfolio</span>
           </span>
@@ -31,7 +37,7 @@ export default function Header({ theme, changeTheme }) {
             <a
               href='/cv.pdf'
               download
-              className={`flex items-center space-x-2 border border-current px-4 py-3 rounded-md transition-colors duration-300`}>
+              className={`flex items-center space-x-2 border border-current px-4 py-3 rounded-md transition-colors duration-300 hover:${theme.bg}`}>
               <Download size={18} />
               <span>download CV</span>
             </a>

@@ -10,34 +10,37 @@ export default function Hero({ theme }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const phrases = ["Hello, world!", "I do frontend developing."];
 
-  const phrasesRef = useRef(0);
-  const charactersRef = useRef(0);
-  const typingSpeedRef = useRef(100);
-  const deletingSpeedRef = useRef(150);
-  const delayRef = useRef(1500);
+ const phraseIndex = useRef(0);
+ const charIndex = useRef(0);
+
+ const typingSpeed = 80;
+ const deletingSpeed = 40;
+ const delayBeforeDeleting = 1200;
+ const delayBeforeTyping = 400;
 
   useEffect(() => {
     let timeout;
 
+    const currentPhrase = phrases[phraseIndex.current];
+
     if (isTyping) {
-      if (charactersRef.current < phrases[phrasesRef.current].length) {
+      if (charIndex.current < currentPhrase.length) {
         timeout = setTimeout(() => {
-          setDisplayText(phrases[phrasesRef.current].substring(0, charactersRef.current + 1));
-          charactersRef.current += 1;
-        }, typingSpeedRef.current);
+          setDisplayText(currentPhrase.slice(0, charIndex.current + 1));
+          charIndex.current += 1;
+        }, typingSpeed);
       } else {
-        setIsTyping(false);
-        timeout = setTimeout(() => setIsTyping(false), delayRef.current);
+        timeout = setTimeout(() => setIsTyping(false), delayBeforeDeleting);
       }
     } else {
-      if (charactersRef.current > 0) {
+      if (charIndex.current > 0) {
         timeout = setTimeout(() => {
-          setDisplayText(phrases[phrasesRef.current].substring(0, charactersRef.current - 1));
-          charactersRef.current -= 1;
-        }, deletingSpeedRef.current);
+          setDisplayText(currentPhrase.slice(0, charIndex.current - 1));
+          charIndex.current -= 1;
+        }, deletingSpeed);
       } else {
-        setIsTyping(true);
-        phrasesRef.current = (phrasesRef.current + 1) % phrases.length;
+        phraseIndex.current = (phraseIndex.current + 1) % phrases.length;
+        timeout = setTimeout(() => setIsTyping(true), delayBeforeTyping);
       }
     }
 
@@ -45,15 +48,15 @@ export default function Hero({ theme }) {
   }, [displayText, isTyping, phrases]);
 
   return (
-    <section className='px-16 md:px-28 py-20'>
+    <section className='px-8 md:px-28 py-10 md:py-20'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
         {/* Left Side - Text with animations */}
         <div className='transition-all duration-500 animate-fadeIn'>
           <h1 className='font-bold mb-6'>
-            <span className={`text-3xl md:text-4xl ${theme.text}`}>{displayText}</span>
-            <span className={`text-3xl md:text-4xl ${theme.text} animate-blink`}>|</span>
+            <span className={`text-2xl md:text-4xl ${theme.text}`}>{displayText}</span>
+            <span className={`text-2xl md:text-4xl ${theme.text} animate-blink`}>|</span>
           </h1>
-          <p className={`text-xl md:text-2xl ${theme.text} ${theme.accent} max-w-2xl mb-8`}>
+          <p className={`text-base md:text-2xl ${theme.text} ${theme.accent} max-w-2xl mb-8`}>
             Building websites with modern technologies using React and TailwindCSS.
           </p>
           <div className='absolute animate-bounce'>
@@ -68,13 +71,12 @@ export default function Hero({ theme }) {
           <div className='aspect-w-1 aspect-h-1'>
             <iframe
               title='Apple II Computer'
-              frameBorder='0'
               allowFullScreen
               mozAllowFullScreen
               webkitAllowFullScreen
-              allow='autoplay; fullscreen; xr-spatial-tracking'
+              allow='autoplay; fullscreen; xr-spatial-tracking; accelerometer'
               src='https://sketchfab.com/models/b5d316548d634f16a72dd503db0aa01b/embed?autostart=1&ui_infos=0&ui_controls=0&ui_stop=0&ui_watermark=0&ui_theme=dark'
-              className='w-full h-[300px] md:h-[400px] rounded-none shadow-none'
+              className='w-full h-[200px] md:h-[400px] rounded-none shadow-none'
             />
           </div>
 
