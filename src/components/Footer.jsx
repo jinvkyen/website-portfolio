@@ -11,13 +11,13 @@ export default function Footer({ theme }) {
   };
 
   return (
-    <footer id='contact' className={`py-12 ${theme.bg} border-t border-opacity-10 border-current`}>
+    <footer id='contact' className={`py-8 ${theme.bg} border-t border-opacity-10 border-current`}>
       <div className='flex flex-col mx-auto '>
-        <div className='flex flex-col md:flex-row justify-between items-center px-8 md:px-28'>
-          <p className={`${theme.text} text-opacity-60`}>
-            © {currentYear} {author.name}. Made with 💛 using React & TailwindCSS
+        <div className='flex flex-row justify-between items-center text-left px-8 md:px-28'>
+          <p className={`${theme.text} text-opacity-60 text-xs text-balance md:text-sm`}>
+            © {currentYear}. Made with 💛 by {author.name}.
           </p>
-          <div className='flex space-x-6'>
+          <div className='flex space-x-6 mt-4'>
             <a
               href={author.githubUrl}
               target='_blank'
