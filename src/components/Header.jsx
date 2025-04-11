@@ -11,7 +11,7 @@ export default function Header({ theme, changeTheme }) {
       <div className='container mx-auto px-8 md:px-28 py-4 flex justify-between items-center'>
         <div className='text-2xl font-bold'>
           <span className={`flex items-center gap-2 ${theme.text}`}>
-            {/* Change Logo */}
+            {/* Change Logo here*/}
             <img
               src='https://res.cloudinary.com/diolcqc1f/image/upload/v1744387272/logo_qjfhso.png'
               alt='logo'
@@ -19,7 +19,7 @@ export default function Header({ theme, changeTheme }) {
               height={40}
               className={`bg-current rounded-xl p-1.5`}
             />
-            {/* Change Text */}
+            {/* Change Text here */}
             <span className={theme.text}>| portfolio</span>
           </span>
         </div>

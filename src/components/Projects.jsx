@@ -1,6 +1,6 @@
 import { Github, ExternalLink } from "lucide-react";
 
-// Change projects here:
+// Change projects data here:
 const projectsData = [
   {
     id: 1,

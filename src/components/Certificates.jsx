@@ -1,4 +1,5 @@
 export function Certificates({ theme }) {
+  // Change certificates data here:
   const certificates = [
     {
       id: 1,
@@ -44,12 +45,7 @@ export function Certificates({ theme }) {
 
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center'>
           {certificates.map((cert) => (
-            <a
-              key={cert.id}
-              href={cert.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={`group p-4`}>
+            <a key={cert.id} href={cert.url} target='_blank' rel='noopener noreferrer' className={`group p-4`}>
               <div className='mb-4 overflow-hidden rounded-md'>
                 <img src={cert.image} alt={cert.name} className='w-full h-20 object-contain' />
               </div>

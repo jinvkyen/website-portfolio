@@ -6,17 +6,16 @@ export default function Hero({ theme }) {
   const [isTyping, setIsTyping] = useState(true);
 
   // Change phrase here:
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const phrases = ["Hello, world!", "I do frontend developing."];
 
- const phraseIndex = useRef(0);
- const charIndex = useRef(0);
+  const phraseIndex = useRef(0);
+  const charIndex = useRef(0);
 
- const typingSpeed = 80;
- const deletingSpeed = 40;
- const delayBeforeDeleting = 1200;
- const delayBeforeTyping = 400;
+  const typingSpeed = 80;
+  const deletingSpeed = 40;
+  const delayBeforeDeleting = 1200;
+  const delayBeforeTyping = 400;
 
   useEffect(() => {
     let timeout;

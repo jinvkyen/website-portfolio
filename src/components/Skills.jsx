@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 
+// Change skillset data here:
 const techStacks = [
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
