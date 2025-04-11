@@ -35,8 +35,8 @@ export default function Header({ theme, changeTheme }) {
 
             {/* Resume/CV button */}
             <a
-              href='/cv.pdf'
-              download
+              href='/assets/cv.pdf'
+              download='cv.pdf'
               className={`flex items-center space-x-2 border border-current px-4 py-3 rounded-md transition-colors duration-300 hover:${theme.bg}`}>
               <Download size={18} />
               <span>download CV</span>
@@ -52,8 +52,8 @@ export default function Header({ theme, changeTheme }) {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${theme.bg} px-4 py-4 transition-all duration-500`}>
-          <nav className='flex flex-col space-y-4'>
+        <div className={`md:hidden ${theme.bg} px-8 py-4 transition-all duration-500`}>
+          <nav className='flex flex-col space-y-8'>
             <a
               href='#projects'
               className={`text-lg ${theme.text} hover:${theme.accent} transition-colors duration-300`}
@@ -88,11 +88,11 @@ export default function Header({ theme, changeTheme }) {
               </button>
 
               <a
-                href='/resume.pdf'
-                download
+                href='/assets/cv.pdf'
+                download='cv.pdf'
                 className={`flex items-center text-lg space-x-2 border border-current px-4 py-2 rounded-md hover:${theme.accent} transition-colors duration-300`}>
                 <Download size={18} />
-                <span>Resume</span>
+                <span>CV</span>
               </a>
             </div>
           </nav>

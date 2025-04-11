@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 
 const colorThemes = [
   { name: "Yellow & Gray", text: "text-yellow-400", bg: "bg-gray-800", accent: "text-yellow-300" },
