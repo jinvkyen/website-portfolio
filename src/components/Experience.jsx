@@ -8,7 +8,7 @@ export function Experience({ theme }) {
       period: "2024 - 2025",
       description:
         "Contributed the development of responsive website using React.js and TailwindCSS. Collaborated with UX designers.",
-      achievements: ["Nominated for Best Capstone Award."],
+      achievements: ["Nominated for Best Capstone."],
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ export function Experience({ theme }) {
               </div>
 
               <div
-                className={`min-w-0 md:w-5/12 p-6 rounded-lg shadow-md ${theme.bg} border border-opacity-10 border-current md:group-odd:text-right`}>
+                className={`min-w-0 md:w-6/12 p-6 rounded-lg shadow-md ${theme.bg} border border-opacity-10 border-current md:group-odd:text-right`}>
                 <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-2'>
                   <h3 className={`text-xl font-bold ${theme.text}`}>{job.role}</h3>
                   <span className={`${theme.accent} text-sm`}>{job.period}</span>
