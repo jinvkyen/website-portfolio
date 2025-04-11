@@ -1,4 +1,4 @@
-import { BriefcaseIcon, Calendar, MapPin } from "lucide-react";
+import { Building, CalendarCheckIcon, MapPinCheckInside } from "lucide-react";
 
 export function Experience({ theme }) {
   // Change experiences data here:
@@ -36,17 +36,17 @@ export function Experience({ theme }) {
                   <h3 className='text-xl font-bold'>{job.role}</h3>
 
                   <div className='flex items-center mt-2 mb-1'>
-                    <BriefcaseIcon size={18} className='mr-2' />
+                    <Building size={18} className='mr-2' />
                     <span>{job.company}</span>
                   </div>
 
                   <div className='flex items-center mb-1'>
-                    <Calendar size={18} className='mr-2' />
+                    <CalendarCheckIcon size={18} className='mr-2' />
                     <span>{job.period}</span>
                   </div>
 
                   <div className='flex items-center mb-2'>
-                    <MapPin size={18} className='mr-2' />
+                    <MapPinCheckInside size={18} className='mr-2' />
                     <span>{job.location}</span>
                   </div>
                 </div>

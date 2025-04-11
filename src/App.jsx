@@ -35,6 +35,7 @@ function App() {
       <Experience theme={currentTheme} />
       <Certificates theme={currentTheme} />
       <Skills theme={currentTheme} />
+      <Footer theme={currentTheme} />
     </div>
   );
 }

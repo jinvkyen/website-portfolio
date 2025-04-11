@@ -70,10 +70,7 @@ export default function Hero({ theme }) {
           <div className='aspect-w-1 aspect-h-1'>
             <iframe
               title='Apple II Computer'
-              allowFullScreen
-              mozAllowFullScreen
-              webkitAllowFullScreen
-              allow='autoplay; fullscreen; xr-spatial-tracking; accelerometer'
+              allow='autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope'
               src='https://sketchfab.com/models/b5d316548d634f16a72dd503db0aa01b/embed?autostart=1&ui_infos=0&ui_controls=0&ui_stop=0&ui_watermark=0&ui_theme=dark'
               className='w-full h-[200px] md:h-[400px] rounded-none shadow-none'
             />
