@@ -1,63 +1,40 @@
+import Marquee from "react-fast-marquee";
+
+const techIconUrls = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://skillicons.dev/icons?i=tailwind",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+];
+
+const repeatedIcons = [...techIconUrls, ...techIconUrls];
+
 export default function Skills({ theme }) {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "React.js", level: 90 },
-        { name: "TailwindCSS", level: 85 },
-        { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 75 },
-        { name: "HTML/CSS", level: 95 },
-      ],
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", level: 80 },
-        { name: "Express", level: 75 },
-        { name: "MongoDB", level: 70 },
-        { name: "Firebase", level: 85 },
-      ],
-    },
-    {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git/GitHub", level: 90 },
-        { name: "Figma", level: 80 },
-        { name: "Responsive Design", level: 95 },
-        { name: "REST APIs", level: 85 },
-        { name: "Testing (Jest)", level: 70 },
-      ],
-    },
-  ];
 
   return (
-    <section id='skills' className='py-20 px-4'>
-      <div className='container mx-auto'>
-        <h2 className={`text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>Skills & Technologies</h2>
+    <section id='skills' className='py-20 px-16 md:px-28'>
+      <div className='container mx-auto flex flex-col'>
+        <h2 className={`text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>familiar technologies</h2>
+      </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {skillCategories.map((category, index) => (
-            <div key={index} className={`p-6 rounded-lg shadow-md ${theme.bg} border border-opacity-10 border-current`}>
-              <h3 className={`text-xl font-bold mb-6 ${theme.text}`}>{category.title}</h3>
-
-              <div className='space-y-4'>
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className='flex justify-between mb-1'>
-                      <span className={theme.text}>{skill.name}</span>
-                      <span className={theme.accent}>{skill.level}%</span>
-                    </div>
-                    <div className={`w-full h-2 rounded-full bg-gray-200 bg-opacity-20`}>
-                      <div className={`h-2 rounded-full ${theme.accent}`} style={{ width: `${skill.level}%` }}></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <Marquee pauseOnHover speed={30} gradient={false} className='overflow-x-hidden w-full'>
+        <div className='flex gap-4 px-4 items-center'>
+          {repeatedIcons.map((url, index) => (
+            <img
+              key={index}
+              src={url}
+              alt=''
+              className='w-12 h-12 object-contain hover:scale-90 transition-transform cursor-pointer'
+            />
           ))}
         </div>
-      </div>
+      </Marquee>
     </section>
   );
 }

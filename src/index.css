@@ -25,7 +25,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  background-color: #ccd0d5;
+  background-color: #0f1f2d;
 }
 
 .container {
@@ -56,6 +56,12 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
+  background-color: #0f1f2d;
+}
+
+iframe {
+  border: none;
+  background: transparent;
 }
 
 
