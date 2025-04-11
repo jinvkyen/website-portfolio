@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Download, DicesIcon } from "lucide-react";
+import { Computer, X, Download, DicesIcon } from "lucide-react";
 
 export default function Header({ theme, changeTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ export default function Header({ theme, changeTheme }) {
 
         {/* Mobile menu button */}
         <button className='md:hidden' onClick={toggleMenu}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={24} /> : <Computer size={24} />}
         </button>
       </div>
 
