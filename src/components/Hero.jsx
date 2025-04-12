@@ -47,7 +47,7 @@ export default function Hero({ theme }) {
   }, [displayText, isTyping, phrases]);
 
   return (
-    <section className='px-8 md:px-28 py-10 md:py-20'>
+    <section className='px-8 sm:px-16 xl:px-28 py-10 md:py-20'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
         {/* Left Side - Text with animations */}
         <div className='transition-all duration-500 animate-fadeIn'>

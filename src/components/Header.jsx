@@ -8,29 +8,27 @@ export default function Header({ theme, changeTheme }) {
 
   return (
     <header className={`sticky top-0 z-50 ${theme.bg} transition-colors duration-300`}>
-      <div className='container mx-auto px-8 md:px-28 py-4 flex justify-between items-center'>
+      <div className='container mx-auto px-8 xl:px-28 py-4 flex justify-between items-center'>
         <div className='text-2xl font-bold'>
           <span className={`flex items-center gap-2 ${theme.text}`}>
             {/* Change Logo here*/}
             <img
               src='https://res.cloudinary.com/diolcqc1f/image/upload/v1744387272/logo_qjfhso.png'
               alt='logo'
-              width={40}
-              height={40}
-              className={`bg-current rounded-xl p-1.5`}
+              className={`bg-current rounded-xl p-1.5 w-10 h-10 sm:w-16 sm:h-16`}
             />
             {/* Change Text here */}
-            <span className={theme.text}>| portfolio</span>
+            <span className={`text-xl sm:text-4xl ${theme.text} overflow-hidden`}>| portfolio</span>
           </span>
         </div>
 
-        <div className='hidden md:flex items-center space-x-8'>
+        <div className='hidden xl:flex items-center space-x-8'>
           <div className='flex items-center space-x-4'>
             <button
               onClick={changeTheme}
               className={`p-2 rounded-full bg-transparent hover:bg-opacity-20 hover:bg-gray-300 transition-all`}
               aria-label='Change theme'>
-              <DicesIcon className={theme.text} size={30} />
+              <DicesIcon className={theme.text} />
             </button>
 
             {/* Resume/CV button */}
@@ -45,54 +43,54 @@ export default function Header({ theme, changeTheme }) {
         </div>
 
         {/* Mobile menu button */}
-        <button className='md:hidden' onClick={toggleMenu}>
-          {isMenuOpen ? <X size={24} /> : <Computer size={24} />}
+        <button className='xl:hidden' onClick={toggleMenu}>
+          {isMenuOpen ? <X className='sm:w-15 sm:h-13' /> : <Computer className='sm:w-15 sm:h-13' />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${theme.bg} px-8 py-4 transition-all duration-500`}>
-          <nav className='flex flex-col space-y-8'>
+        <div className={`xl:hidden ${theme.bg} px-8 sm:px-16 xl:px-28 py-4 sm:py-12 transition-all duration-500`}>
+          <nav className='flex flex-col sm:space-y-16 space-y-8'>
             <a
               href='#projects'
-              className={`text-lg ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Projects
             </a>
             <a
               href='#skills'
-              className={`text-lg ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Skills
             </a>
             <a
               href='#experience'
-              className={`text-lg ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Experience
             </a>
             <a
               href='#certificates'
-              className={`text-lg ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Certificates
             </a>
 
-            <div className='flex items-center space-x-4 pt-2'>
+            <div className='flex items-center space-x-4 sm:space-x-6 pt-2'>
               <button
                 onClick={changeTheme}
                 className='p-2 rounded-full hover:bg-opacity-20 hover:bg-gray-300 transition-all'
                 aria-label='Change theme'>
-                <DicesIcon className={theme.text} size={26} />
+                <DicesIcon className={`sm:w-14 sm:h-12 {theme.text}`} />
               </button>
 
               <a
                 href='/assets/cv.pdf'
                 download='cv.pdf'
                 className={`flex items-center text-lg space-x-2 border border-current px-4 py-2 rounded-md hover:${theme.accent} transition-colors duration-300`}>
-                <Download size={18} />
-                <span>CV</span>
+                <Download className={`sm:w-14 sm:h-12 {theme.text}`} />
+                <span className='text-lg sm:text-3xl'>CV</span>
               </a>
             </div>
           </nav>

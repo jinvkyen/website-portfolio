@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 
 // Change skillset data here:
 const techStacks = [
@@ -18,13 +19,32 @@ const techStacks = [
 
 const repeatedIcons = [...techStacks, ...techStacks];
 
+// Helper function to convert Tailwind class to RGB color
+const getTailwindColor = (tailwindClass) => {
+  const colorMap = {
+    "bg-gray-800": [31, 41, 55],
+    "bg-amber-100": [254, 243, 199],
+    "bg-black": [0, 0, 0],
+    "bg-amber-50": [255, 251, 235],
+    "bg-white": [255, 255, 255],
+    "bg-slate-900": [15, 23, 42],
+  };
+
+  return colorMap[tailwindClass] || [255, 255, 255];
+};
+
 export default function Skills({ theme }) {
+  const [gradientColor, setGradientColor] = useState("");
+
+  useEffect(() => {
+    const rgbValues = getTailwindColor(theme.bg);
+    setGradientColor(`rgb(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`);
+  }, [theme.bg]);
 
   return (
     <section id='skills' className='py-20'>
       <div className='container mx-auto flex flex-col'>
         <h2 className={`overflow-hidden text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>
-          {" "}
           technologies
         </h2>
       </div>
@@ -33,8 +53,8 @@ export default function Skills({ theme }) {
         pauseOnHover
         speed={30}
         gradient={true}
-        gradientWidth={400}
-        gradientColor={`${theme.bg}`}
+        gradientWidth={200}
+        gradientColor={gradientColor}
         className='overflow-x-hidden w-full'>
         <div className='flex gap-10 px-4 items-center'>
           {repeatedIcons.map((url, index) => (

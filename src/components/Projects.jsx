@@ -4,7 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 const projectsData = [
   {
     id: 1,
-    title: "valentines envelope animation",
+    title: "valentine's envelope animation",
     description: "This project is a Valentine's Day-themed envelope animation built using HTML, CSS, and JavaScript.",
     image: "https://res.cloudinary.com/diolcqc1f/image/upload/v1744367841/MacBook_Pro_14__-_2_zf96vb.png",
     technologies: ["HTML", "CSS", "JS"],
@@ -24,7 +24,7 @@ const projectsData = [
     id: 3,
     title: "researchAIde",
     description:
-      "About this is an AI Research Assistant module developed as an internal project.",
+      "This is an AI Research Assistant module developed as an internal project.",
     image: "https://res.cloudinary.com/diolcqc1f/image/upload/v1744372752/researchaide_itly9z.png",
     technologies: ["HTML", "TailwindCSS", "JS"],
     githubUrl: "https://github.com/jinvkyen/research-8d",
@@ -34,9 +34,9 @@ const projectsData = [
 
 export default function Projects({ theme }) {
   return (
-    <section id='projects' className='py-20 px-8 md:px-28'>
+    <section id='projects' className='py-20 px-8 sm:px-16 xl:px-28'>
       <div className='flex flex-col container mx-auto'>
-        <h2 className={`text-3xl md:text-4xl overflow-hidden font-bold mb-12 text-center ${theme.accent}`}>projects</h2>
+        <h2 className={`text-3xl md:text-4xl overflow-hidden font-bold mb-12 text-center ${theme.text}`}>projects</h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projectsData.map((project) => (

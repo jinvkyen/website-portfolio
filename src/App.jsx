@@ -32,10 +32,10 @@ function App() {
     <div className={`min-h-screen ${currentTheme.bg} ${currentTheme.text} transition-colors duration-500`}>
       <Header theme={currentTheme} changeTheme={changeTheme} />
       <Hero theme={currentTheme} />
-      <Projects theme={currentTheme} />
+      <Skills theme={currentTheme} />
       <Experience theme={currentTheme} />
       <Certificates theme={currentTheme} />
-      <Skills theme={currentTheme} />
+      <Projects theme={currentTheme} />
       <Footer theme={currentTheme} />
     </div>
   );

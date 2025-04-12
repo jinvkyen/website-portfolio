@@ -37,19 +37,19 @@ export function Certificates({ theme }) {
   ];
 
   return (
-    <section id='certificates' className='py-20 px-8 md:px-28'>
+    <section id='certificates' className='py-20 px-8 sm:px-16 xl:px-28'>
       <div className='flex flex-col container mx-auto'>
         <h2 className={`overflow-hidden text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>
           achievements
         </h2>
 
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center place-self-center'>
           {certificates.map((cert) => (
             <a key={cert.id} href={cert.url} target='_blank' rel='noopener noreferrer' className={`group p-4`}>
               <div className='mb-4 overflow-hidden rounded-md'>
                 <img src={cert.image} alt={cert.name} className='w-full h-20 object-contain' />
               </div>
-              <h3 className={`text-lg font-bold ${theme.text}`}>{cert.name}</h3>
+              <h3 className={`text-base font-bold ${theme.text}`}>{cert.name}</h3>
               <div className='flex justify-between mt-2'>
                 <span className={`text-xs ${theme.accent}`}>{cert.issuer}</span>
                 <span className={`text-xs ${theme.text} text-opacity-60`}>{cert.date}</span>
