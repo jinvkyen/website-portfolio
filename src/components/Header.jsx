@@ -15,10 +15,10 @@ export default function Header({ theme, changeTheme }) {
             <img
               src='https://res.cloudinary.com/diolcqc1f/image/upload/v1744387272/logo_qjfhso.png'
               alt='logo'
-              className={`bg-current rounded-xl p-1.5 w-10 h-10 sm:w-16 sm:h-16`}
+              className={`bg-current rounded-xl p-1.5 w-10 h-10 sm:w-16 sm:h-16 md:w-10 md:h-10`}
             />
             {/* Change Text here */}
-            <span className={`text-xl sm:text-4xl ${theme.text} overflow-hidden`}>| portfolio</span>
+            <span className={`text-xl sm:text-3xl xl:text-2xl ${theme.text} overflow-hidden`}>| portfolio</span>
           </span>
         </div>
 
@@ -44,7 +44,7 @@ export default function Header({ theme, changeTheme }) {
 
         {/* Mobile menu button */}
         <button className='xl:hidden' onClick={toggleMenu}>
-          {isMenuOpen ? <X className='sm:w-15 sm:h-13' /> : <Computer className='sm:w-15 sm:h-13' />}
+          {isMenuOpen ? <X className='sm:w-13 sm:h-10' /> : <Computer className='sm:w-13 sm:h-10' />}
         </button>
       </div>
 
@@ -54,25 +54,25 @@ export default function Header({ theme, changeTheme }) {
           <nav className='flex flex-col sm:space-y-16 space-y-8'>
             <a
               href='#projects'
-              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-2xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Projects
             </a>
             <a
               href='#skills'
-              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-2xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Skills
             </a>
             <a
               href='#experience'
-              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-2xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Experience
             </a>
             <a
               href='#certificates'
-              className={`text-lg sm:text-3xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
+              className={`text-lg sm:text-2xl ${theme.text} hover:${theme.accent} transition-colors duration-300`}
               onClick={toggleMenu}>
               Certificates
             </a>

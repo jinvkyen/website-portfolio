@@ -51,11 +51,11 @@ export default function Hero({ theme }) {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
         {/* Left Side - Text with animations */}
         <div className='transition-all duration-500 animate-fadeIn'>
-          <h1 className='font-bold mb-6'>
-            <span className={`text-2xl md:text-4xl ${theme.text}`}>{displayText}</span>
-            <span className={`text-2xl md:text-4xl ${theme.text} animate-blink`}>|</span>
+          <h1 className='font-bold mb-6 overflow-hidden'>
+            <span className={`text-2xl sm:text-4xl xl:text-5xl ${theme.text}`}>{displayText}</span>
+            <span className={`text-2xl sm:text-4xl xl:text-5xl ${theme.text} animate-blink`}>|</span>
           </h1>
-          <p className={`text-base md:text-2xl ${theme.text} ${theme.accent} max-w-2xl mb-8`}>
+          <p className={`text-sm md:text-lg xl:text-2xl text-pretty ${theme.text} ${theme.accent} max-w-2xl mb-8`}>
             Building websites with modern technologies using React and TailwindCSS.
           </p>
           <div className='absolute animate-bounce'>
