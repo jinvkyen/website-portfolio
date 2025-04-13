@@ -25,7 +25,7 @@ export default function Header({ theme, changeTheme }) {
         <div className='hidden xl:flex items-center space-x-8'>
           <div className='flex items-center'>
             <button onClick={changeTheme} className={`transition-all`} aria-label='Change theme'>
-              <DicesIcon className='sm:w-13 sm:h-10 ${theme.accent} hover:${theme.text}' />
+              <DicesIcon className={`sm:w-13 sm:h-10 ${theme.text}`} />
             </button>
 
             {/* Resume/CV button */}

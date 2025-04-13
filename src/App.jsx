@@ -78,7 +78,7 @@ function App() {
   }, [currentTheme.bg]);
 
   return (
-    <div className={`min-h-screen ${currentTheme.bg} ${currentTheme.text} transition-colors duration-500`}>
+    <div className={`h-dvh ${currentTheme.bg} ${currentTheme.text} transition-colors duration-500`}>
       <Header theme={currentTheme} changeTheme={changeTheme} />
       <Hero theme={currentTheme} />
       <Skills theme={currentTheme} />

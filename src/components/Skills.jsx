@@ -44,7 +44,7 @@ export default function Skills({ theme }) {
   }, [theme.bg]);
 
   return (
-    <section id='skills' className='py-20'>
+    <section id='skills' className='py-30'>
       <div className='container mx-auto flex flex-col'>
         <h2 className={`overflow-hidden text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>
           technologies

@@ -43,14 +43,16 @@ export default function Projects({ theme }) {
   const githubProfileUrl = "https://github.com/jinvkyen";
 
   return (
-    <section id='projects' className='py-16 px-4 md:px-28 md:py-24 bg-current'>
-      <div className='pb-16 flex justify-between items-center'>
-        <h2 className={`text-3xl md:text-4xl overflow-hidden font-bold text-center ${theme.texts}`}>projects</h2>
+    <section id='projects' className='py-20 px-4 md:px-28 md:py-30 bg-current'>
+      <div className='pb-16 flex flex-col md:flex-row md:justify-between items-center'>
+        <h2 className={`mb-6 md:mb-0 text-3xl md:text-4xl overflow-hidden font-bold text-center ${theme.texts}`}>
+          projects
+        </h2>
         <a
           href={githubProfileUrl}
           target='_blank'
           rel='noopener noreferrer'
-          className={`inline-flex items-center gap-3 ${theme.accent} ${theme.bg} px-8 py-4 rounded-full font-medium text-lg transition-colors hover:opacity-90 shadow-lg`}>
+          className={`inline-flex items-center gap-3 ${theme.accent} ${theme.bg} px-8 py-4 rounded-full font-medium text-base md:text-lg transition-colors hover:opacity-90 shadow-lg`}>
           <Code size={20} />
           view all my projects
           <ArrowRight size={20} />
