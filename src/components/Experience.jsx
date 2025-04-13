@@ -55,7 +55,7 @@ export function Experience({ theme }) {
         </div>
         <div className='col-span-1 order-1 md:order-2 mb-8 md:mb-0'>
           <h2 className={`text-3xl md:text-4xl mb-4 font-bold text-center ${theme.text} overflow-hidden`}>
-            Work Experience
+            work experience
           </h2>
         </div>
       </div>
