@@ -7,7 +7,7 @@ export default function Hero({ theme }) {
 
   // Change phrase here:
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const phrases = ["Hello, world!", "I do frontend developing."];
+  const phrases = ["Hello, World!", "I do frontend developing."];
 
   const phraseIndex = useRef(0);
   const charIndex = useRef(0);
@@ -53,9 +53,9 @@ export default function Hero({ theme }) {
         <div className='transition-all duration-500 animate-fadeIn'>
           <h1 className='font-bold mb-6 overflow-hidden'>
             <span className={`text-2xl sm:text-4xl xl:text-5xl ${theme.text}`}>{displayText}</span>
-            <span className={`text-2xl sm:text-4xl xl:text-5xl ${theme.text} animate-blink`}>|</span>
+            <span className={`text-2xl sm:text-4xl xl:text-5xl ${theme.text} blink`}>|</span>
           </h1>
-          <p className={`text-sm md:text-lg xl:text-2xl text-pretty ${theme.text} ${theme.accent} max-w-2xl mb-8`}>
+          <p className={`text-sm md:text-lg xl:text-2xl text-pretty ${theme.accent} max-w-2xl mb-8`}>
             Building websites with modern technologies using React and TailwindCSS.
           </p>
           <div className='absolute animate-bounce'>
@@ -67,7 +67,7 @@ export default function Hero({ theme }) {
 
         {/* Right Side - SketchFab asset */}
         <div className='w-full'>
-          <div className='aspect-w-1 aspect-h-1'>
+          <div className='aspect-w-1 aspect-h-1 rounded-2xl'>
             <iframe
               title='Apple II Computer'
               allow='autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope'
@@ -76,8 +76,8 @@ export default function Hero({ theme }) {
             />
           </div>
 
-          <p className='text-sm font-normal mt-2 text-gray-600'>
-            enjoy a 3d model:
+          <p className='text-sm font-normal mt-2 ${theme.accent}'>
+            enjoy this 3d model of
             <a
               href='https://sketchfab.com/3d-models/apple-ii-computer-b5d316548d634f16a72dd503db0aa01b?utm_medium=embed&utm_campaign=share-popup&utm_content=b5d316548d634f16a72dd503db0aa01b'
               target='_blank'

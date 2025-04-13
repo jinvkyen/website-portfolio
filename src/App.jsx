@@ -6,14 +6,63 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
-import { BrowserRouter } from "react-router-dom";
 
+// Add color themes here:
 const colorThemes = [
-  { name: "Yellow & Gray", text: "text-yellow-400", bg: "bg-gray-800", accent: "text-yellow-300" },
-  { name: "Blue & Cream", text: "text-blue-700", bg: "bg-amber-100", accent: "text-blue-500" },
-  { name: "Black & White", text: "text-white", bg: "bg-black", accent: "text-gray-300" },
-  { name: "Red & Beige", text: "text-red-700", bg: "bg-amber-50", accent: "text-red-500" },
-  { name: "Green & White", text: "text-emerald-700", bg: "bg-white", accent: "text-emerald-500" },
+  {
+    name: "Blue & Cream",
+    text: "text-blue-700",
+    bg: "bg-amber-100",
+    accent: "text-blue-500",
+    texts: "text-amber-100",
+    bgs: "bg-blue-500",
+    bgls: "bg-blue-700",
+  },
+  {
+    name: "Black & White",
+    text: "text-white",
+    bg: "bg-black",
+    accent: "text-gray-300",
+    texts: "text-black",
+    bgs: "bg-gray-300",
+    bgls: "bg-white",
+  },
+  {
+    name: "Red & Beige",
+    text: "text-red-700",
+    bg: "bg-amber-50",
+    accent: "text-red-500",
+    texts: "text-amber-50",
+    bgs: "bg-red-500",
+    bgls: "bg-red-700",
+  },
+  {
+    name: "Green & White",
+    text: "text-emerald-700",
+    bg: "bg-white",
+    accent: "text-emerald-500",
+    texts: "text-white",
+    bgs: "bg-emerald-500",
+    bgls: "bg-emerald-700",
+  },
+  {
+    name: "Blue & Mint",
+    text: "text-[#B5FCCD]",
+    bg: "bg-[#205781]",
+    accent: "text-[#7AC6C0]",
+    texts: "text-[#205781]",
+    bgs: "bg-[#7AC6C0]",
+    bgls: "bg-[#B5FCCD]",
+  },
+  {
+    name: "Shades of Purple",
+    text: "text-[#D4BEE4]",
+    bg: "bg-[#3B1E54]",
+    accent: "text-[#9B7EBD]",
+    texts: "text-[#3B1E54]",
+    bgs: "bg-[#9B7EBD]",
+    bgls: "bg-[#D4BEE4]",
+  },
 ];
 
 function App() {

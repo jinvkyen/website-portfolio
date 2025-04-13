@@ -8,7 +8,7 @@ export default function Footer({ theme }) {
     name: "jinvkyen",
     githubUrl: "https://github.com/jinvkyen",
     linkedInUrl: "https://www.linkedin.com/in/ayen-t-3a2950312/",
-    
+
   };
 
   return (

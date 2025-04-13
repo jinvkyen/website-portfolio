@@ -23,12 +23,9 @@ export default function Header({ theme, changeTheme }) {
         </div>
 
         <div className='hidden xl:flex items-center space-x-8'>
-          <div className='flex items-center space-x-4'>
-            <button
-              onClick={changeTheme}
-              className={`p-2 rounded-full bg-transparent hover:bg-opacity-20 hover:bg-gray-300 transition-all`}
-              aria-label='Change theme'>
-              <DicesIcon className={theme.text} />
+          <div className='flex items-center'>
+            <button onClick={changeTheme} className={`transition-all`} aria-label='Change theme'>
+              <DicesIcon className='sm:w-13 sm:h-10 ${theme.accent} hover:${theme.text}' />
             </button>
 
             {/* Resume/CV button */}
@@ -77,18 +74,15 @@ export default function Header({ theme, changeTheme }) {
               Certificates
             </a>
 
-            <div className='flex items-center space-x-4 sm:space-x-6 pt-2'>
-              <button
-                onClick={changeTheme}
-                className='p-2 rounded-full hover:bg-opacity-20 hover:bg-gray-300 transition-all'
-                aria-label='Change theme'>
-                <DicesIcon className={`sm:w-14 sm:h-12 {theme.text}`} />
+            <div className='flex items-center sm:space-x-6 pt-2'>
+              <button onClick={changeTheme} className='transition-all' aria-label='Change theme'>
+                <DicesIcon className={`relative right-4 sm:w-14 sm:h-12 {theme.text}`} />
               </button>
 
               <a
                 href='/assets/cv.pdf'
                 download='cv.pdf'
-                className={`flex items-center text-lg space-x-2 border border-current px-4 py-2 rounded-md hover:${theme.accent} transition-colors duration-300`}>
+                className={`relative right-4 flex items-center text-lg space-x-2 border border-current px-4 py-2 rounded-md hover:${theme.accent} transition-colors duration-300`}>
                 <Download className={`sm:w-14 sm:h-12 {theme.text}`} />
                 <span className='text-lg sm:text-3xl'>CV</span>
               </a>

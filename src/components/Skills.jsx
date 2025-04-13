@@ -28,6 +28,8 @@ const getTailwindColor = (tailwindClass) => {
     "bg-amber-50": [255, 251, 235],
     "bg-white": [255, 255, 255],
     "bg-slate-900": [15, 23, 42],
+    "bg-[#205781]": [32, 87, 129],
+    "bg-[#3B1E54]": [59, 30, 84],
   };
 
   return colorMap[tailwindClass] || [255, 255, 255];
