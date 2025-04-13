@@ -1,5 +1,8 @@
 # Open Source Website Portfolio
 
+![web-portfolio-2](https://github.com/user-attachments/assets/5302f62a-a5f6-4aa3-a008-55f525175433)
+
+
 A responsive and customizable portfolio template built with **React.js** and **TailwindCSS**, designed for anyone to showcase their skills, projects, and cv.
 
 - customizable  
