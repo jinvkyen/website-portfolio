@@ -58,7 +58,7 @@ export default function Hero({ theme }) {
           <p className={`text-sm md:text-lg xl:text-2xl text-pretty ${theme.accent} max-w-2xl mb-8`}>
             Building websites with modern technologies using React and TailwindCSS.
           </p>
-          <div className='absolute animate-bounce'>
+          <div className='relative animate-bounce'>
             <a href='#projects' aria-label='Scroll down'>
               <ChevronDown size={32} className={theme.text} />
             </a>
