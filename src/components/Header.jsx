@@ -30,11 +30,12 @@ export default function Header({ theme, changeTheme }) {
 
             {/* Resume/CV button */}
             <a
-              href='/assets/cv.pdf'
-              download='cv.pdf'
+              href='/assets/resume.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
               className={`flex items-center space-x-2 border border-current px-4 py-3 rounded-md transition-colors duration-300 hover:${theme.bg}`}>
               <Download size={18} />
-              <span>download CV</span>
+              <span>resume</span>
             </a>
           </div>
         </div>
@@ -80,11 +81,12 @@ export default function Header({ theme, changeTheme }) {
               </button>
 
               <a
-                href='/assets/cv.pdf'
-                download='cv.pdf'
+                href='/assets/resume.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
                 className={`relative right-4 flex items-center text-lg space-x-2 border border-current px-4 py-2 rounded-md hover:${theme.accent} transition-colors duration-300`}>
                 <Download className={`sm:w-14 sm:h-12 {theme.text}`} />
-                <span className='text-lg sm:text-3xl'>CV</span>
+                <span className='text-lg sm:text-3xl'>resume</span>
               </a>
             </div>
           </nav>
