@@ -47,9 +47,12 @@ npm run dev
 </pre>
 
 
-### 📄 Replace CV
+### 📄 Replace CV or Resume
 
 /public/assets/cv.pdf
+or
+/public/assets/resume.pdf
+(or if you prefer just the link, simply remove the download in the <a> tag)
 
 ## ☁️ Deploy on Vercel
 ### Push your forked repo to GitHub
