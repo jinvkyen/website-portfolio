@@ -9,7 +9,6 @@ export function Experience({ theme }) {
       company: "Rakso CT.",
       period: "2025 - Present",
       location: "Makati, Philippines",
-      dot: <Dot size={12} />,
     },
     {
       id: 2,
@@ -26,7 +25,7 @@ export function Experience({ theme }) {
         <div className='col-span-1 order-2 md:order-1'>
           <div className='container mx-auto'>
             <div className='space-y-8'>
-              {experiences.map((job) => (
+              {experiences.map((job, index) => (
                 <div key={job.id}>
                   <h3 className='text-xl font-bold'>{job.role}</h3>
 
@@ -40,14 +39,20 @@ export function Experience({ theme }) {
                     <span>{job.period}</span>
                   </div>
 
-                  <div className='flex items-center'>
+                  <div className='flex items-center mb-4'>
                     <MapPinCheckInside size={18} className='mr-2' />
-                    <span className="leading-none overflow-hidden">{job.location}
-                      { job.dot }
-                      { job.dot }
-                      { job.dot }
-                    </span>
+                    <span>{job.location}</span>
                   </div>
+
+                  {index === 0 && (
+                    <div className='flex items-center'>
+                      <div className="block items-center space-x-1 mt-2 ">
+                        <Dot size={18} className='mr-1' />
+                        <Dot size={18} className='mr-1' />
+                        <Dot size={18} className='mr-1' />
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -64,3 +69,4 @@ export function Experience({ theme }) {
 }
 
 export default Experience;
+
