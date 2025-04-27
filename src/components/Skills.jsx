@@ -46,7 +46,7 @@ export default function Skills({ theme }) {
   return (
     <section id='skills' className='py-30'>
       <div className='container mx-auto flex flex-col'>
-        <h2 className={`overflow-hidden text-3xl md:text-4xl font-bold mb-12 text-center ${theme.text}`}>
+        <h2 className={`overflow-hidden text-3xl md:text-4xl font-bold py-2 mb-12 text-center ${theme.text}`}>
           technologies
         </h2>
       </div>
@@ -64,7 +64,7 @@ export default function Skills({ theme }) {
               key={index}
               src={url}
               alt=''
-              className='w-12 h-12 object-contain hover:scale-90 transition-transform cursor-pointer'
+              className='w-12 h-13 object-contain hover:scale-90 transition-transform cursor-pointer'
             />
           ))}
         </div>
