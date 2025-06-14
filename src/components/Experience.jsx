@@ -7,7 +7,7 @@ export function Experience({ theme }) {
       id: 1,
       role: "R & D Intern",
       company: "Rakso CT.",
-      period: "2025 - Present",
+      period: "Jan - Apr 2025",
       location: "Makati, Philippines",
     },
     {
